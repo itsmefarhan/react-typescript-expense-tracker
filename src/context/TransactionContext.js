@@ -2,11 +2,7 @@ import React, { createContext, useReducer } from "react";
 import transactionReducer from "./transactionReducer";
 
 const initialState = {
-  transactions: [
-    { id: 1, text: "Received payment", amount: 100 },
-    { id: 2, text: "Paid utilities", amount: -40 },
-    { id: 3, text: "Received rent", amount: 200 },
-  ],
+  transactions: [],
 };
 
 export const TransactionContext = createContext();
