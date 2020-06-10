@@ -1,0 +1,12 @@
+.global {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px) {
+  .med-query {
+    margin: 0px auto;
+    padding-top: 30px;    
+  }
+}
