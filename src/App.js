@@ -11,7 +11,7 @@ function App() {
   return (
     <TransactionContextProvider>
       <div className="container">
-        <h1 className="text-center text-muted mt-3">Expense Tracker</h1>
+        <h1 className="text-center text-warning mt-3">Expense Tracker</h1>
         <div className="global mt-4">
           <Balance />
           <Transactions />

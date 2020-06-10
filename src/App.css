@@ -1,3 +1,6 @@
+body {
+  background: #36342e;
+}
 .global {
   display: flex;
   justify-content: space-between;
@@ -5,12 +8,23 @@
 }
 
 .card {
-  box-shadow: 2px 2px grey
+  box-shadow: 2px 2px grey;
+  background: #e6e9f0;
+}
+
+.delete-btn {
+  height: 30px;
+  align-self: center;
+  margin-left: 5px;
+}
+
+hr {
+  background: #e6e9f0;
 }
 
 @media only screen and (max-width: 767px) {
   .med-query {
     margin: 0px auto;
-    padding-top: 30px;    
+    padding-top: 30px;
   }
 }
