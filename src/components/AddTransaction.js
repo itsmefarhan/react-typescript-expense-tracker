@@ -51,7 +51,7 @@ const AddTransaction = () => {
             Add - (minus sign) before amount for expenses
           </small>
           <input
-            type="text"
+            type="number"
             name="amount"
             className="form-control"
             value={amount}
