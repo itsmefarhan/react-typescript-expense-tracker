@@ -1,4 +1,4 @@
-## Expense Tracker
+## Expense Tracker with React and TypeScript 
 
 ## Available Scripts
 
