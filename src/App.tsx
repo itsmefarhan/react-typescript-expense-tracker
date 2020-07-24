@@ -7,7 +7,7 @@ import Transactions from "./components/Transactions";
 
 import TransactionContextProvider from "./context/TransactionContext";
 
-function App() {
+const App: React.FC = () => {
   return (
     <TransactionContextProvider>
       <div className="container">
@@ -20,6 +20,6 @@ function App() {
       </div>
     </TransactionContextProvider>
   );
-}
+};
 
 export default App;

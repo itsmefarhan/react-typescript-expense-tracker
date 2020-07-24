@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 
-const Transactions = () => {
-  const { transactions, dispatch } = useContext(TransactionContext);
+const Transactions: React.FC = () => {
+  const { state, dispatch } = useContext(TransactionContext);
+  const { transactions } = state;
 
   return (
     <div className="mt-3 med-query">
@@ -29,7 +30,9 @@ const Transactions = () => {
             </div>
             <button
               className="btn btn-danger btn-sm delete-btn"
-              onClick={() => dispatch({ type: "DELETE", payload: transaction.id })}
+              onClick={() =>
+                dispatch({ type: "DELETE", payload: transaction.id })
+              }
             >
               x
             </button>

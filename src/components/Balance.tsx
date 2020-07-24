@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 
-const Balance = () => {
-  const { transactions } = useContext(TransactionContext);
+const Balance: React.FC = () => {
+  const { state } = useContext(TransactionContext);
+  const { transactions } = state;
 
-  const amount = transactions.map((transaction) => transaction.amount);
+  const amount =
+    transactions && transactions.map((transaction) => transaction.amount);
 
   // Calculate total
   const total = amount.reduce((acc, item) => (acc += item), 0).toFixed(2);
@@ -24,7 +26,7 @@ const Balance = () => {
     <div className="mt-3 med-query">
       <h3 className="text-muted">Your Balance</h3>
       <hr />
-      <h5 className='text-light'>${total}</h5>
+      <h5 className="text-light">${total}</h5>
       <div className="card" style={{ width: "300px" }}>
         <div className="card-body global">
           <div>

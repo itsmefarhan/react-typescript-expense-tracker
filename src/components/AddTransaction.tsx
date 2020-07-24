@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 
-const AddTransaction = () => {
+const AddTransaction: React.FC = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState("");
   const { dispatch } = useContext(TransactionContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!text) {
       return alert("Text field is required");
@@ -17,7 +17,11 @@ const AddTransaction = () => {
     }
     dispatch({
       type: "ADD",
-      payload: { id: new Date().toString(), text, amount: parseInt(amount) },
+      payload: {
+        id: new Date().toString(),
+        text,
+        amount: parseInt(amount),
+      },
     });
     // clear form fields
     setText("");
