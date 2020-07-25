@@ -2,14 +2,8 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import App from "./App";
 import AddTransaction from "./components/AddTransaction";
-import { Simulate } from "react-dom/test-utils";
 import Balance from "./components/Balance";
-
-// test('renders Expense Tracker in App Component', () => {
-//   const { getByText } = render(<App />);
-//   const linkElement = getByText(/Expense Tracker/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+import Transactions from "./components/Transactions";
 
 describe("<App />", () => {
   it("Renders <App /> component correctly", () => {
@@ -42,21 +36,23 @@ it("check whether button is enabled when input fields are not empty", () => {
   expect(addBtn).toBeEnabled();
 });
 
-// it("check whether button is clicked", () => {
-//   const onSubmit = jest.fn();
-//   const { getByTestId } = render(<AddTransaction />);
-//   const textEl = getByTestId("text");
-//   const amountEl = getByTestId("amount");
-
-//   fireEvent.change(textEl, { target: { value: "this is test" } });
-//   fireEvent.change(amountEl, { target: { value: "11" } });
-
-//   fireEvent.click(getByTestId('form'));
-//   expect(onSubmit).toBeCalled();
-// });
-
 it("check whether balance heading has class text-light", () => {
   const { getByTestId } = render(<Balance />);
   const total = getByTestId("total");
   expect(total).toHaveClass("text-light");
+});
+
+it("Render income", () => {
+  const { getByTestId } = render(<Balance />);
+  expect(getByTestId("income")).toBeInTheDocument();
+});
+
+it("Render expense", () => {
+  const { getByTestId } = render(<Balance />);
+  expect(getByTestId("expense")).toBeInTheDocument();
+});
+
+it("Renders Transaction history", () => {
+  const { getByText } = render(<Transactions />);
+  expect(getByText("Transactions History")).toBeInTheDocument();
 });
