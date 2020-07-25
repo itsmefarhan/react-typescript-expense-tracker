@@ -38,6 +38,7 @@ const AddTransaction: React.FC = () => {
             Text
           </label>
           <input
+            data-testid="text"
             type="text"
             name="text"
             className="form-control"
@@ -55,6 +56,7 @@ const AddTransaction: React.FC = () => {
             Add - (minus sign) before amount for expenses
           </small>
           <input
+            data-testid="amount"
             type="number"
             name="amount"
             className="form-control"
@@ -63,6 +65,7 @@ const AddTransaction: React.FC = () => {
           />
         </div>
         <input
+          data-testid="testbtn"
           type="submit"
           value="Add"
           className="btn btn-outline-info btn-block"
