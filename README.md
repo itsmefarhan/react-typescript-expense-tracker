@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-## Expense Tracker with React and TypeScript 
-=======
 ## Expense Tracker with React, TypeScript and PWA
->>>>>>> ts
 
 This is project 7 of bootcamp. This project is built with React / TypeScript. It is also a Progressive Web App.
 
