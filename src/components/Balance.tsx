@@ -26,7 +26,7 @@ const Balance: React.FC = () => {
     <div className="mt-3 med-query">
       <h3 className="text-muted">Your Balance</h3>
       <hr />
-      <h5 className="text-light">${total}</h5>
+      <h5 className="text-light" data-testid='total'>${total}</h5>
       <div className="card" style={{ width: "300px" }}>
         <div className="card-body global">
           <div>
