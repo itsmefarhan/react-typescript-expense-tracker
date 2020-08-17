@@ -13,7 +13,7 @@ if ("serviceWorker" in navigator) {
 }
 
 firebase.initializeApp({
-  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  messagingSenderId: "262296927726",
 });
 
 const initMessaging = firebase.messaging();
